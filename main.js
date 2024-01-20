@@ -4,7 +4,6 @@ function generateRandomNumber() {
     document.getElementById('randomNumberDisplay').innerText = `Random number: ${randomNumber}`;
 }
 
-
 function showMouseCoordinates(event) {
     document.getElementById('coordinates').innerText = `Mouse cords: ${event.clientX} , ${event.clientY}`;
 }
