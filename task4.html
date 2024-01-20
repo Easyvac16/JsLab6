@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            width: 10%;
+        }
+
+        .tab {
+            padding: 10px;
+            margin: 0 0 10px 0;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            background-color: #f2f2f2;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab:hover {
+            background-color: #e6e6e6;
+        }
+
+        .tab.active {
+            background-color: #c0c0c0;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 0 5px 5px 0;
+            background-color: #fff;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .content {
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tabs">
+        <div class="tab" onclick="showTab('tab1', this)">Вкладка 1</div>
+        <div class="tab" onclick="showTab('tab2', this)">Вкладка 2</div>
+        <div class="tab" onclick="showTab('tab3', this)">Вкладка 3</div>
+        <a href="task1.html">Task1</a>
+        <a href="task2.html">Task2</a>
+        <a href="task3.html">Task3</a>
+    </div>
+
+    <div class="content">
+        <div class="tab-content" id="tab1">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper in dui id sollicitudin. Praesent
+                bibendum neque et mi volutpat, nec pharetra urna venenatis. Vestibulum mi dolor, pellentesque quis felis
+                cursus, aliquam congue diam. Duis eget vulputate justo. Duis non felis eleifend, vulputate lorem vitae,
+                bibendum erat. Mauris ut tincidunt urna. Fusce eget purus eget neque commodo venenatis ac in nisl. Nunc
+                at ornare arcu. Aenean et ipsum id risus dapibus gravida a nec lorem. Nunc porta fringilla velit et
+                faucibus. Integer maximus eu erat ut rhoncus. Maecenas fringilla leo lorem, eu rhoncus orci fermentum
+                eget. Proin pulvinar aliquam quam eget scelerisque. Aenean non arcu nec nisi ultrices laoreet.</p>
+        </div>
+
+        <div class="tab-content" id="tab2">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper in dui id sollicitudin. Praesent
+                bibendum neque et mi volutpat, nec pharetra urna venenatis. Vestibulum mi dolor, pellentesque quis felis
+                cursus, aliquam congue diam. Duis eget vulputate justo. Duis non felis eleifend, vulputate lorem vitae,
+                bibendum erat. Mauris ut tincidunt</p>
+        </div>
+
+        <div class="tab-content" id="tab3">
+
+            <p>Cras ut eleifend nibh. Maecenas leo felis, ullamcorper pulvinar convallis quis, pretium in ex. Orci
+                varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas turpis diam,
+                eleifend non hendrerit vitae, consectetur sed nulla. Curabitur suscipit sit amet mi at pellentesque.
+                Proin viverra neque eget nunc cursus euismod. Vivamus volutpat sit amet est ut fringilla. Suspendisse ut
+                molestie felis. Etiam laoreet, sem euismod cursus condimentum, tellus lectus dignissim ligula, at
+                pulvinar odio felis congue ipsum. Proin molestie erat elit, sodales venenatis justo ullamcorper et.
+                Proin venenatis vestibulum iaculis.</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
