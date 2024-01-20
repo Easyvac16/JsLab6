@@ -27,7 +27,7 @@ window.addEventListener('contextmenu', (event) => {
 })
 
 function toggleTextVisibility() {
-    var hiddenText = document.getElementById('hiddenText');
+    let hiddenText = document.getElementById('hiddenText');
 
     if (hiddenText.style.display === 'none') {
         hiddenText.style.display = 'block';
