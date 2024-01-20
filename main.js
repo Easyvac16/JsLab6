@@ -22,9 +22,6 @@ function showMouseButton(event) {
     document.getElementById('mouseButton').innerText = `Mouse button:${buttonClicked} `;
 }
 
-window.addEventListener('contextmenu', (event) => {
-    event.preventDefault()
-})
 
 function toggleTextVisibility() {
     let hiddenText = document.getElementById('hiddenText');
