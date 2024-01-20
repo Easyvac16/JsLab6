@@ -9,19 +9,19 @@ function showMouseCoordinates(event) {
 }
 
 function showMouseButton(event) {
+
     let buttonClicked = '';
-    if (event.type === 'click') {
-        if (event.button === 0) {
-            buttonClicked = 'left click';
-        }
-    } else if (event.type === 'contextmenu') {
-        event.preventDefault();
+    if (event.which == 1) {
+        buttonClicked = 'Left click';
+    } else if (event.which == 3) {
         buttonClicked = 'Right click';
     }
-
     document.getElementById('mouseButton').innerText = `Mouse button:${buttonClicked} `;
 }
 
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
 
 function toggleTextVisibility() {
     let hiddenText = document.getElementById('hiddenText');
