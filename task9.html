@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопка Like</title>
+    <style>
+        #likeButton {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: rgb(1, 140, 233);
+            color: white;
+            border-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="likeButton" onclick="increaseLikes()">👍 Like</button>
+
+    <script>
+        let likeCount = 0;
+
+        function increaseLikes() {
+            likeCount++;
+            document.getElementById('likeButton').innerHTML = `👍 Like ${likeCount}`;
+        }
+    </script>
+
+</body>
+
+</html>
