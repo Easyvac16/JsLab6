@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Випадаюче горизонтальне меню</title>
+    <style>
+        #mainMenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        #mainMenu>li {
+            display: inline-block;
+            position: relative;
+            background-color: aqua;
+            width: 6%;
+        }
+
+        #mainMenu a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            display: block;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: 10px;
+            border-radius: 5px;
+            list-style: none;
+            background-color: aquamarine;
+        }
+
+        .submenu li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="mainMenu">
+        <li><a href="#">Пункт 1</a>
+            <ul class="submenu">
+                <li><a href="#">Підпункт 1.1</a></li>
+                <li><a href="#">Підпункт 1.2</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Пункт 2</a>
+            <ul class="submenu">
+                <li><a href="#">Підпункт 2.1</a></li>
+                <li><a href="#">Підпункт 2.2</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var mainMenuItems = document.querySelectorAll('#mainMenu > li');
+
+            mainMenuItems.forEach(function (item) {
+                item.addEventListener('mouseover', function () {
+                    var submenu = this.querySelector('.submenu');
+                    submenu.style.display = 'block';
+                });
+
+                item.addEventListener('mouseout', function () {
+                    var submenu = this.querySelector('.submenu');
+                    submenu.style.display = 'none';
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
